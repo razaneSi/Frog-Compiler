@@ -1020,3 +1020,4 @@ class Ui_mw_main(object):
         else:
             self.apply_dark_theme(mw_main)
    
+
