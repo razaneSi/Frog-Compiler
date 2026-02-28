@@ -1,0 +1,26 @@
+FRG_Begin
+
+FRG_Int i, total #
+FRG_Real moyenne #
+
+i := 1 #
+total := 0 #
+
+Repeat
+    total := total + i #
+    FRG_Print total #
+    i := i + 1 #
+until [ i > 5 ]
+
+moyenne := total / 5 #
+
+If [ moyenne >= 5 ]
+Begin
+    FRG_Print "Moyenne correcte :" , moyenne #
+End
+Else
+Begin
+    FRG_Print "Moyenne insuffisante" #
+End
+
+FRG_End

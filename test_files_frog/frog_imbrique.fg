@@ -1,0 +1,71 @@
+FRG_Begin
+
+## DÃ©clarations
+FRG_Int i, j, valeur, compteur #
+FRG_Real moyenne, total #
+
+## Initialisation
+total := 0 #
+compteur := 0 #
+
+FRG_Print "=== TEST SIMPLE ===" #
+
+i := 1 #
+Repeat
+    j := 1 #
+
+    Repeat
+        valeur := i * 10 + j #
+        FRG_Print "Cellule", i, ",", j, "=", valeur #
+
+        ## Exemple de conditions sans ELSE IF
+        If [ valeur % 2 == 0 ]
+        Begin
+            FRG_Print " -> Pair" #
+        End
+        Else
+        Begin
+            FRG_Print " -> Impair" #
+        End
+
+        If [ valeur > 20 ]
+        Begin
+            FRG_Print " -> Plus grand que 20" #
+        End
+
+        total := total + valeur #
+        compteur := compteur + 1 #
+
+        j := j + 1 #
+    until [ j > 3 ]
+
+    i := i + 1 #
+until [ i > 2 ]
+
+## Calcul de la moyenne
+moyenne := total / compteur #
+
+FRG_Print "Total =", total #
+FRG_Print "Compteur =", compteur #
+FRG_Print "Moyenne =", moyenne #
+
+## Analyse de la moyenne SANS ELSE IF
+If [ moyenne > 25 ]
+Begin
+    FRG_Print "Moyenne haute" #
+End
+Else
+Begin
+    If [ moyenne >= 15 ]
+    Begin
+        FRG_Print "Moyenne moyenne" #
+    End
+    Else
+    
+        FRG_Print "Moyenne basse" #
+    
+End
+
+FRG_Print "=== FIN ===" #
+
+FRG_End 

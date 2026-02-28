@@ -1,0 +1,94 @@
+FRG_Begin
+
+## Déclarations
+FRG_Int i, j, k, n, somme, produit, compteur #
+FRG_Real moyenne, ratio #
+
+## Initialisations
+n := 10 #
+i := 1 #
+somme := 0 #
+produit := 1 #
+compteur := 0 #
+
+FRG_Print "=== DEBUT DU CALCUL COMPLEXE ===" #
+
+###############################
+## 1) Calcul de la somme et du produit de 1..n
+###############################
+Repeat
+    somme := somme + i #
+    produit := produit * i #
+    FRG_Print "i =", i, "somme =", somme, "produit =", produit #
+    i := i + 1 #
+until [ i > n ]
+
+###############################
+## 2) Calcul de la moyenne
+###############################
+moyenne := somme / n #
+FRG_Print "Moyenne =", moyenne #
+
+###############################
+## 3) Test complexe
+###############################
+If [ moyenne > 20 ]
+Begin
+    FRG_Print "Moyenne haute" #
+    ratio := moyenne / 2 #
+    FRG_Print "Ratio =", ratio #
+End
+Else
+Begin
+    If [ moyenne == 20 ]
+        FRG_Print "Moyenne égale à 20" #
+    Else
+    Begin
+        FRG_Print "Moyenne basse" #
+        ratio := moyenne * 2 #
+        FRG_Print "Ratio doublé =", ratio #
+    End
+End
+
+###############################
+## 4) Boucle imbriquée (simulation d'un tableau)
+###############################
+FRG_Print "=== TABLE MULTIPLICATION 1..5 ===" #
+
+i := 1 #
+
+Repeat
+    j := 1 #
+
+    Repeat
+        k := i * j #
+        FRG_Print i, "x", j, "=", k #
+        j := j + 1 #
+    until [ j > 5 ]
+
+    i := i + 1 #
+until [ i > 5 ]
+
+###############################
+## 5) Vérification pair/impair pour 1..10
+###############################
+FRG_Print "=== PAIRS ET IMPAIRS ===" #
+
+compteur := 1 #
+
+Repeat
+    If [ compteur % 2 == 0 ]
+        FRG_Print compteur, "est pair" #
+    Else
+        FRG_Print compteur, "est impair" #
+    End
+
+    compteur := compteur + 1 #
+until [ compteur > 10 ]
+
+###############################
+## Fin
+###############################
+FRG_Print "=== FIN PROGRAMME COMPLEXE ===" #
+
+FRG_End

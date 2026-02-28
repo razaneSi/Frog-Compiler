@@ -1,0 +1,22 @@
+FRG_Begin
+
+FRG_Int a, b, resultat #
+FRG_Real moyenne #
+
+a := 10 #
+b := a + 5  #    
+
+resultat := a + b  #
+
+moyenne := resultat / 2 # 
+
+If [ moyenne > 10 ]  
+Begin    
+    FRG_Print "Grande moyenne :" , moyenne #
+End
+Else
+Begin
+    FRG_Print "Petite moyenne :" , moyenne #
+End
+
+FRG_End

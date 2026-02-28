@@ -1,0 +1,32 @@
+FRG_Begin
+
+## Déclaration des variables
+FRG_Int  i, j, x1, x2 #
+FRG_Real x3 #
+
+## Affectations initiales
+i := 30 #
+j := 5 #
+x1 := 2 #
+x2 := 10 #
+
+## Test conditionnel
+If [ i <= 20 ]
+    x1 := 10 #
+Else
+Begin
+    x1 := 30 #
+    x3 := x1 * 4 #
+    FRG_Print x1, x3 #
+End
+
+## Boucle Repeat…Until
+Repeat
+    i := i - 5 #
+    FRG_Print i #
+until [ i <= 15 ]
+
+## Affichage final
+FRG_Print "Hello from FROG!" #
+
+FRG_End

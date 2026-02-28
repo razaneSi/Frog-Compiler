@@ -1,0 +1,17 @@
+FRG_Begin
+FRG_Int i, limit#
+i := 0#
+limit := 3#
+
+Repeat
+    FRG_Print "iteration", i#
+
+    If (i == limit)
+    Begin
+        FRG_Print "STOP"#
+    End
+
+    i := i + 1#
+until (i > limit)
+
+FRG_End

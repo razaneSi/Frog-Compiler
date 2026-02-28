@@ -1,0 +1,47 @@
+## Programme FROG court de test
+
+FRG_Begin
+
+## Variables
+FRG_Int a #
+FRG_Real x, y,b ,c#
+FRG_Strg msg #
+
+## Initialisation
+a := 10 #
+b := 5 #
+c := 2 #
+x := 3.5 #
+y := 1.5 #
+msg := "Test expressions" #
+
+a := a + b * c          # 
+b := [a - c] / 2        # 
+x := x + y              # 
+y := y * 2              # 
+
+IF [a > b]
+Begin
+    FRG_Print "a > b" #
+End
+ELSE
+Begin
+    FRG_Print "a <= b" #
+End
+
+IF [x == y]
+Begin
+    FRG_Print "x == y" #
+End
+ELSE
+Begin
+    FRG_Print "x != y" #
+End
+
+
+c := [a + b] * [x - y] / 2#
+FRG_Print "c = ", c #
+
+FRG_Print msg#
+
+FRG_End
