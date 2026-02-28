@@ -1,0 +1,28 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/upload_file_green.png</file>
+    <file>icons/upload_green.png</file>
+    <file>icons/accept.png</file>
+    <file>icons/caution.png</file>
+    <file>icons/close.png</file>
+    <file>icons/compiler.png</file>
+    <file>icons/compiler2.png</file>
+    <file>icons/explorer.png</file>
+    <file>icons/lexical-icon.png</file>
+    <file>icons/nofile_black.png</file>
+    <file>icons/nofile_white.png</file>
+    <file>icons/play-button_white.png</file>
+    <file>icons/play-button-arrowhead_black.png</file>
+    <file>icons/semantic.png</file>
+    <file>icons/syntaxe_icon.png</file>
+    <file>icons/tree-structure.png</file>
+    <file>icons/fit_to_screen.png</file>
+    <file>icons/reset.png</file>
+    <file>icons/zoom_out.png</file>
+    <file>icons/zoom_in.png</file>
+    <file>icons/sun.png</file>
+    <file>icons/documentation.png</file>
+    <file>icons/help.png</file>
+
+  </qresource>
+</RCC>

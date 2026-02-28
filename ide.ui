@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mw_main</class>
+ <widget class="QMainWindow" name="mw_main">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>1058</width><height>647</height></rect>
+  </property>
+  <property name="windowTitle">
+   <string>Compilateur FROG</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="recources.qrc">
+    <normaloff>:/icons/icons/compiler.png</normaloff>
+   </iconset>
+  </property>
+
+  <!-- CENTRAL WIDGET -->
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="centralLayout">
+
+    <!-- MAIN SPLITTER -->
+    <item>
+     <widget class="QSplitter" name="mainSplitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="stretch">
+        <set>1,4,3</set>
+      </property>
+
+      <!-- LEFT PANEL -->
+      <widget class="QFrame" name="f_leftPanel">
+       <property name="frameShape"><enum>QFrame::StyledPanel</enum></property>
+       <layout class="QVBoxLayout" name="leftPanelLayout">
+        <item>
+         <widget class="QWidget" name="formLayoutWidget">
+          <layout class="QFormLayout" name="formLayout">
+
+           <item row="0" column="0">
+            <widget class="QLabel" name="l_explorer">
+             <property name="text">
+              <string>&lt;img src=":/icons/icons/explorer.png" width="20" height="20"&gt;   Explorer</string>
+             </property>
+            </widget>
+           </item>
+
+           <item row="1" column="0">
+            <widget class="QPushButton" name="pb_uploadFile">
+             <property name="text"><string>Upload File</string></property>
+            </widget>
+           </item>
+
+           <item row="2" column="0">
+            <widget class="QPushButton" name="pb_runLexical">
+             <property name="text"><string>Run Lexical</string></property>
+            </widget>
+           </item>
+
+           <item row="3" column="0">
+            <widget class="QPushButton" name="pb_runSyntax">
+             <property name="text"><string>Run Syntax</string></property>
+            </widget>
+           </item>
+
+           <item row="4" column="0">
+            <widget class="QPushButton" name="pb_generateTree">
+             <property name="text"><string>Generate Tree</string></property>
+            </widget>
+           </item>
+
+           <item row="5" column="0">
+            <widget class="QPushButton" name="pb_runSemantic">
+             <property name="text"><string>Run Semantic</string></property>
+            </widget>
+           </item>
+
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+
+      <!-- MAIN PANEL -->
+      <widget class="QFrame" name="f_mainPanel">
+       <property name="frameShape"><enum>QFrame::StyledPanel</enum></property>
+       <layout class="QVBoxLayout" name="mainPanelLayout">
+
+        <item>
+         <widget class="QLabel" name="l_fileStatus">
+          <property name="text">
+           <string>No file Loaded...  &lt;img src=":/icons/icons/nofile_white.png" width="30" height="30"&gt;</string>
+          </property>
+         </widget>
+        </item>
+
+        <item>
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="widgetResizable"><bool>true</bool></property>
+
+          <widget class="QWidget" name="scrollAreaWidgetContents_2">
+           <layout class="QVBoxLayout" name="verticalLayout_scroll">
+            <item>
+             <widget class="QTextBrowser" name="tb_codePlace"/>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+
+        <item>
+         <widget class="Line" name="line">
+          <property name="orientation"><enum>Qt::Horizontal</enum></property>
+         </widget>
+        </item>
+
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item><widget class="QPushButton" name="pb_syntaxicAnalysis"><property name="text"><string>Syntaxic Analysis</string></property></widget></item>
+          <item><widget class="QPushButton" name="pb_lexicalAnalysis"><property name="text"><string>Lexical Analysis</string></property></widget></item>
+         </layout>
+        </item>
+
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item><widget class="QPushButton" name="pb_semanticAnalysis"><property name="text"><string>Semantic Analysis</string></property></widget></item>
+          <item><widget class="QPushButton" name="pb_generateSyntaxicTree"><property name="text"><string>Generate Syntaxic Tree</string></property></widget></item>
+         </layout>
+        </item>
+
+       </layout>
+      </widget>
+
+      <!-- RESULTS PANEL -->
+      <widget class="QFrame" name="f_resultsPanel">
+       <property name="frameShape"><enum>QFrame::StyledPanel</enum></property>
+       <layout class="QVBoxLayout" name="resultsMainLayout">
+
+        <item>
+         <widget class="QTabWidget" name="tabWidget">
+
+          <!-- RESULTS TAB -->
+          <widget class="QWidget" name="tab_5">
+           <attribute name="title"><string>Results</string></attribute>
+           <layout class="QVBoxLayout" name="resultsTabLayout">
+            <item>
+             <widget class="QScrollArea" name="scrollArea_2">
+              <property name="widgetResizable"><bool>true</bool></property>
+
+              <widget class="QWidget" name="scrollAreaWidgetContents">
+               <layout class="QVBoxLayout" name="resultsScrollLayout">
+                <item>
+                 <widget class="QTextBrowser" name="tb_results"/>
+                </item>
+               </layout>
+              </widget>
+
+             </widget>
+            </item>
+           </layout>
+          </widget>
+
+          <!-- ERRORS TAB -->
+          <widget class="QWidget" name="tab_6">
+           <attribute name="title"><string>Errors</string></attribute>
+           <layout class="QVBoxLayout" name="errorsTabLayout">
+            <item>
+             <widget class="QScrollArea" name="scrollArea_3">
+              <property name="widgetResizable"><bool>true</bool></property>
+
+              <widget class="QWidget" name="scrollAreaWidgetContents_3">
+               <layout class="QVBoxLayout" name="errorsScrollLayout">
+                <item><widget class="QListView" name="lv_errors"/></item>
+               </layout>
+              </widget>
+
+             </widget>
+            </item>
+           </layout>
+          </widget>
+
+          <!-- TREE TAB -->
+          <widget class="QWidget" name="tab_7">
+           <attribute name="title"><string>Syntaxique Tree</string></attribute>
+           <layout class="QVBoxLayout" name="treeTabLayout">
+            <item><widget class="QGraphicsView" name="gv_tree"/></item>
+           </layout>
+          </widget>
+
+         </widget>
+        </item>
+
+       </layout>
+      </widget>
+
+     </widget>
+    </item>
+
+    <!-- LOGS PANEL (BOTTOM) -->
+    <item>
+     <widget class="QFrame" name="f_logsPanel">
+      <property name="minimumSize"><size><width>0</width><height>60</height></size></property>
+      <property name="frameShape"><enum>QFrame::StyledPanel</enum></property>
+
+      <layout class="QVBoxLayout" name="logsPanelLayout">
+       <item><widget class="QListView" name="lv_logs"/></item>
+      </layout>
+     </widget>
+    </item>
+
+   </layout>
+  </widget>
+
+  <!-- MENUS -->
+  <widget class="QMenuBar" name="menubar">
+   <widget class="QMenu" name="menuFile">
+    <property name="title"><string>File</string></property>
+   </widget>
+   <widget class="QMenu" name="menuRun">
+    <property name="title"><string>Run</string></property>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title"><string>Help</string></property>
+   </widget>
+  </widget>
+
+  <resources>
+   <include location="recources.qrc"/>
+  </resources>
+
+ </widget>
+</ui>
