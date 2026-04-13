@@ -1,5 +1,5 @@
 # Frog-Compiler
-this a third year compiler project we were asked to create a compiler/interpreter for the FROG programming language with a responsive interface .
+this is a third year compiler project we were asked to create a compiler/interpreter for the FROG programming language with a responsive interface .
 
 
 
